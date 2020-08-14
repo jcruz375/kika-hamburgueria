@@ -1,14 +1,13 @@
 import React from 'react';
 
 import './assets/styles/global.css'
-import PageHeader from './components/PageHeader';
-import Caroussel from './components/Caroussel';
+import HomePage from './pages/Home';
+
 
 function App() {
   return (
       <>
-        <PageHeader/>
-        <Caroussel />
+        <HomePage/>
       </>
   );
 }

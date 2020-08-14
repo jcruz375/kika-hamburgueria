@@ -26,11 +26,11 @@
     }
     
     html, body, #root{
-        height: 100vh;
+        min-height: 100%;
     }
     
     body{
-        background: var(--color-background);
+        background: var(--color-primary);
     }
     
     #root{
@@ -38,6 +38,7 @@
         flex: 1;
         align-items: center;
         justify-content: center;
+        height: 100vh;
     }
     
     body, input, button, textarea{

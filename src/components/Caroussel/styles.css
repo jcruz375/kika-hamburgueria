@@ -1,6 +1,5 @@
 .carroussel{
-    position: absolute;
-    top: 20rem;
+
 }
 
 .carroussel section{
@@ -26,7 +25,7 @@
 
 @media(min-width: 1100px){
     .carroussel{
-        top: 18rem;
-        height: 127rem;
+
+        
     }
 }

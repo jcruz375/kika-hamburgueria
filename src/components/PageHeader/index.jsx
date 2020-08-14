@@ -14,9 +14,9 @@ function PageHeader() {
                 <div className="button-block">
                     <a href="#"><p>HOME</p></a>
                     <a href="#"><p>CARDÁPIO</p></a>
-                    <a href="#"><p>CARDÁPIO</p></a>
                     <a href="#"><p>DELIVERY</p></a>
                     <a href="#"><p>PROMOÇÕES</p></a>
+                    <a href="#"><p>PEDIDOS</p></a>
                     <a href="#"><p>CONTATO</p></a>
                 </div>
             </div>

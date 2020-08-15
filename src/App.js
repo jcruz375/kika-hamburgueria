@@ -1,13 +1,14 @@
 import React from 'react';
 
+import Router from './pages/Router';
+
 import './assets/styles/global.css'
-import HomePage from './pages/Home';
 
 
 function App() {
   return (
       <>
-        <HomePage/>
+        <Router/>
       </>
   );
 }

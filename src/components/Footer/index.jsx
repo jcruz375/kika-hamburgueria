@@ -14,7 +14,7 @@ function Footer() {
                 </span>
                 <div className="footer-texts">
                     <p>Avenida Orfeo Paravente, 182</p>
-                    <p>(11)98840-6431</p>
+                    <p>(11)96802-5673</p>
                     <p>kikahamburgueria@gmail.com</p>
                 </div>
                 <div className="footer-links">

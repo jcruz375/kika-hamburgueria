@@ -18,8 +18,8 @@ function Footer() {
                     <p>kikahamburgueria@gmail.com</p>
                 </div>
                 <div className="footer-links">
-                    <a target="_blank" href="http://api.whatsapp.com/send?1=pt_BR&phone=5511968025673"><img src={facebookIcon} alt="Icone link do facebook"/></a>
-                    <a target="_blank" href="https://www.instagram.com/hamburgueria_kika/"><img src={instagramIcon} alt="Icone link do instagram"/></a>
+                    <a target="_blank"  rel="noopener noreferrer" href="http://api.whatsapp.com/send?1=pt_BR&phone=5511968025673"><img src={facebookIcon} alt="Icone link do facebook"/></a>
+                    <a target="_blank"  rel="noopener noreferrer" href="https://www.instagram.com/hamburgueria_kika/"><img src={instagramIcon} alt="Icone link do instagram"/></a>
                 </div>
             </div>
         </footer>

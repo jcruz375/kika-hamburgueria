@@ -47,8 +47,8 @@
 .page-header .header-content .button-block{
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    justify-content: space-evenly;
+    width: 90%;
 }
 
 .page-header .header-content .button-block a{

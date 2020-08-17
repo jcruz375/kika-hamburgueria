@@ -16,7 +16,7 @@ function PageHeader() {
                     <Link to="/"><p>HOME</p></Link>
                     <Link to="/cardápio"><p>CARDÁPIO</p></Link>
                     <Link to="/delivery"><p>DELIVERY</p></Link>
-                    <Link to="/promo"><p>PROMOÇÕES</p></Link>
+                    <Link to="/promo"><p>PROMO</p></Link>
                     <Link to="/pedidos"><p>PEDIDOS</p></Link>
                     <Link to="/contato"><p>CONTATO</p></Link>
                 </div>

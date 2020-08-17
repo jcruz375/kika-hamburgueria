@@ -52,7 +52,7 @@
 }
 
 .page-header .header-content .button-block a{
-    font: 700 1.5rem Nunito;
+    font: 700 1.3rem Nunito;
 
     width: 11rem;
     height: 3rem;
@@ -68,6 +68,10 @@
     transition: 0.5s;
 
     color: var(--color-secundary);
+}
+
+.button-block a + a {
+    margin-left: 10px;
 }
 
 .page-header .header-content a:hover{

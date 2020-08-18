@@ -1,5 +1,7 @@
 import React from 'react';
+
 import PageRoot from '../../components/PageRoot';
+import Product from '../../components/Product';
 
 //import './styles.css';
 
@@ -7,7 +9,8 @@ import PageRoot from '../../components/PageRoot';
 function MenuPage(){
     return(
         <PageRoot>
-            <h1>Pagina de Cardápio</h1>
+            <Product/>
+
         </PageRoot>
     );
 };

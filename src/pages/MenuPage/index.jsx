@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PageRoot from '../../components/PageRoot';
-import Product from '../../components/Product';
+import ProductsContainer from '../../components/Product';
 
 //import './styles.css';
 
@@ -9,7 +9,8 @@ import Product from '../../components/Product';
 function MenuPage(){
     return(
         <PageRoot>
-            <Product/>
+            <ProductsContainer categoryName="Hamburgueres 1.0"/>
+            <ProductsContainer categoryName="Hamburgueres 2.0"/>
 
         </PageRoot>
     );

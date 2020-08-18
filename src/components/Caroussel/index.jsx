@@ -4,8 +4,8 @@ import React from "react";
 import './styles.css'
 
 import carrousselImg01 from '../../assets/images/carroussel.png'
-//import carrousselImg02 from '../../assets/images/carroussel02.jpeg'//editar imagem (quebrou o layout)
-//import carrousselImg03 from '../../assets/images/carroussel03.jpeg'//editar imagem (quebrou o layout)
+import carrousselImg02 from '../../assets/images/carroussel02.jpeg'//editar imagem (quebrou o layout)
+import carrousselImg03 from '../../assets/images/carroussel03.jpeg'//editar imagem (quebrou o layout)
 
 function Caroussel() {
     return (

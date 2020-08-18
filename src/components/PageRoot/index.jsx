@@ -5,6 +5,7 @@ import PageHeader from '../PageHeader';
 import Footer from '../Footer';
 
 const Main = styled.div`
+    width: 100vw;
 
     position: absolute;
     top: 20.4rem;

@@ -4,6 +4,10 @@
 
 }
 
+#products-container + #products-container{
+    margin-top: 5%;
+}
+
 #products-container h1 {
     font: 700 2.5rem Nunito;
     color: var(--color-secundary);

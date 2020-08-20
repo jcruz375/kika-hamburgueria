@@ -5,9 +5,9 @@ import './styles.css';
 
 const Card = styled.div`
 width: 30rem;
-height: 35rem;
+height: 38rem;
 margin-right: 3.6rem;
-padding:0 5px;
+padding:0 10px;
 
 
 display: flex;
@@ -18,7 +18,7 @@ border-radius: 1.9rem;
 
 background: var(--color-box-base);
 
-font: 700 1.8rem Nunito;
+font: 400 1.8rem Nunito;
 color: var(--color-text-title);
 
 @media(min-width: 1100px){
@@ -27,7 +27,7 @@ color: var(--color-text-title);
 
     margin-right: 15rem;
 
-    padding:0 10px;
+    padding:0 20px;
 }
 
 `
@@ -45,7 +45,7 @@ function ProductItem(){
 
             <p id="description">Pão de brioche, tomate, alface, queijo, cebola roxa, 18g de carne e molho opicional</p>
             
-            <h1 id="price">R$ 13,00</h1>
+            <p id="price">R$ 13,00</p>
 
             <form>
                 <input type="hidden" value="001"/>

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import PageRoot from '../../components/PageRoot';
-import Caroussel from '../../components/Caroussel';
 import Slider from '../../components/Slider';
 
 import imgBG from '../../assets/images/objects.svg'

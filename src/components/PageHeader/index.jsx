@@ -10,7 +10,7 @@ function PageHeader() {
         <div className="page-header">
             <div className="header-content">
                 <span>
-                    <img src={logoImg} alt="Kika's logo"/>
+                    <img src={logoImg} alt="Kika's logo" />
                 </span>
                 <div className="button-block">
                     <Link to="/"><p>HOME</p></Link>

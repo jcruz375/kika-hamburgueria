@@ -5,7 +5,7 @@
 }
 
 #products-container + #products-container{
-    margin-top: 5%;
+    margin-top: 3rem;
 }
 
 #products-container h1 {
@@ -15,8 +15,11 @@
 
 #products-container .products-group{
     display: flex;
-
     margin-top: 2%;
+    height: 42rem;
+    max-width: 95%;
+    overflow: auto;
+
 }
 
 
@@ -24,5 +27,9 @@
     #products-container {
         margin-top: 7%;
         margin-left: 15rem;
+    }
+    #products-container .products-group{
+        height: 50rem;
+
     }
 }

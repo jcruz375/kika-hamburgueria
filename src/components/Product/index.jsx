@@ -12,6 +12,11 @@ function ProductsContainer({categoryName}) {
             <div className="products-group">
                 <ProductItem/>
                 <ProductItem/>
+                <ProductItem/>
+                <ProductItem/>
+                <ProductItem/>
+                <ProductItem/>
+                <ProductItem/>
             </div>
 
         </section>

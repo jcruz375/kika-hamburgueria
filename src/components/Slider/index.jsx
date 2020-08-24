@@ -4,11 +4,10 @@ import {
     CarouselItem,
     CarouselControl,
     CarouselIndicators,
-    CarouselCaption
 } from 'reactstrap';
 
-import image01 from '../../assets/images/carroussel.png'
-import image02 from '../../assets/images/carroussel02.jpeg'
+import image01 from '../../assets/images/carroussel04.jpeg'
+import image02 from '../../assets/images/carroussel05.jpeg'
 import image03 from '../../assets/images/carroussel03.jpeg'
 
 import './styles.css';
@@ -28,7 +27,7 @@ const items = [
         src: image03,
         altText: 'Slide 3',
         caption: 'Slide 3'
-    }
+    },
 ];
 
 const Slider = (props) => {

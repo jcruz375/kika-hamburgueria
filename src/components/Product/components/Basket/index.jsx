@@ -12,7 +12,7 @@ z-index: 1;
 `;
 
 
-const Bag = ({ basket }) => {
+const Bag = ({ basket, totalPrice }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const toggle = () => setDropdownOpen(prevState => !prevState);
@@ -24,21 +24,19 @@ const Bag = ({ basket }) => {
                 <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                     <DropdownToggle caret>
                         SACOLA
-                </DropdownToggle>
+                    </DropdownToggle>
                     <DropdownMenu>
-                    <DropdownItem header>Header</DropdownItem>
+                        <DropdownItem header>Seus Itens</DropdownItem>
                         {basket.map((basketItem) => {
                             return (
+                                
                                 <DropdownItem key={basketItem.id} disabled>
                                     {`${basketItem.name}  -  R$${basketItem.price},00`}
-                                    
                                 </DropdownItem>
                             )
                         })}
                         <DropdownItem divider />
-                        <DropdownItem>Foo Action</DropdownItem>
-                        <DropdownItem>Bar Action</DropdownItem>
-                        <DropdownItem>Quo Action</DropdownItem>
+                        <DropdownItem disabled>{`Total do pedido -- R$${totalPrice},00`}</DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
 

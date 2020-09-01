@@ -33,23 +33,32 @@ color: var(--color-text-title);
 `
 
 
-function ProductItem(){
-    return(
+function ProductItem({ sandwich, AddSandwichInBasket }) {
+
+
+    return (
         <Card>
             <span className="img-container">
-                <img src="https://instagram.fcgh38-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/116874628_2711902729094747_5760585771853528550_n.jpg?_nc_ht=instagram.fcgh38-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=xZMYwuLVEfUAX_HeoMD&oh=1e53e0e98a9250d85fb20b2b2276071b&oe=5F65688A" 
-                    alt="Foto do lanche"
+                <img src={sandwich.src}
+                    alt={`Foto do ${sandwich.name}`}
                 />
             </span>
-            <h2>X-SALADA</h2>
+            <h2>{sandwich.name}</h2>
 
-            <p id="description">Pão de brioche, tomate, alface, queijo, cebola roxa, 18g de carne e molho opicional</p>
-            
-            <p id="price">R$ 13,00</p>
+            <p id="description">{sandwich.description}</p>
 
-            <form>
-                <input type="hidden" value="001"/>
-                <button>ADCIONAR</button>
+            <p id="price">{`R$ ${sandwich.price},00 `}</p>
+
+            <form onSubmit={(e) => {
+                e.preventDefault();
+                AddSandwichInBasket(sandwich);
+            }} >
+                <input
+                    type="hidden"
+                    value={sandwich.id}
+                />
+
+                <button type="submit">ADCIONAR</button>
             </form>
         </Card>
     );

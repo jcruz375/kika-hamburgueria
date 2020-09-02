@@ -1,16 +1,9 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-const Span = styled.span`
-width: 25rem;
-height: 4rem;
-position: absolute;
-top: 18%;
-right: 5%;
-z-index: 1;
-`;
-
+//import trashImg from '../../../../assets/images/trash.svg';
+import basketImg from '../../../../assets/images/basket.svg';
+import './styles.css';
 
 const Bag = ({ basket, totalPrice }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -19,28 +12,29 @@ const Bag = ({ basket, totalPrice }) => {
 
     return (
         <>
-            <Span>
 
-                <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                    <DropdownToggle caret>
-                        SACOLA
+                <Dropdown id="Basket" isOpen={dropdownOpen} toggle={toggle}>
+                    <DropdownToggle className="basket-folder" caret>
+                        <span>
+                            <img src={basketImg} alt="carrinho"/> 
+                            <legend>0</legend>
+                        </span>
                     </DropdownToggle>
-                    <DropdownMenu>
-                        <DropdownItem header>Seus Itens</DropdownItem>
+                    <DropdownMenu className="basket-menu">
+                        <DropdownItem className="basket-header" header>SUA CESTA</DropdownItem>
                         {basket.map((basketItem) => {
                             return (
                                 
-                                <DropdownItem key={basketItem.id} disabled>
+                                <DropdownItem key={basketItem.id} className="basket-item" disabled>
                                     {`${basketItem.name}  -  R$${basketItem.price},00`}
                                 </DropdownItem>
-                            )
+                            );
                         })}
                         <DropdownItem divider />
                         <DropdownItem disabled>{`Total do pedido -- R$${totalPrice},00`}</DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
 
-            </Span>
         </>
     );
 }

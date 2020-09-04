@@ -10,30 +10,35 @@ const Bag = ({ basket, totalPrice }) => {
 
     const toggle = () => setDropdownOpen(prevState => !prevState);
 
+
     return (
         <>
 
-                <Dropdown id="Basket" isOpen={dropdownOpen} toggle={toggle}>
-                    <DropdownToggle className="basket-folder" caret>
-                        <span>
-                            <img src={basketImg} alt="carrinho"/> 
-                            <legend>0</legend>
-                        </span>
-                    </DropdownToggle>
-                    <DropdownMenu className="basket-menu">
-                        <DropdownItem className="basket-header" header>SUA CESTA</DropdownItem>
-                        {basket.map((basketItem) => {
-                            return (
-                                
-                                <DropdownItem key={basketItem.id} className="basket-item" disabled>
-                                    {`${basketItem.name}  -  R$${basketItem.price},00`}
-                                </DropdownItem>
-                            );
-                        })}
-                        <DropdownItem divider />
-                        <DropdownItem disabled>{`Total do pedido -- R$${totalPrice},00`}</DropdownItem>
-                    </DropdownMenu>
-                </Dropdown>
+            <Dropdown id="Basket" isOpen={dropdownOpen} toggle={toggle}>
+                <DropdownToggle className="basket-folder" caret>
+                    <span>
+                        <img src={basketImg} alt="carrinho" />
+                        <legend>{basket.length}</legend>
+                    </span>
+                </DropdownToggle>
+                <DropdownMenu className="basket-menu">
+                    <DropdownItem className="basket-header" header>SUA CESTA</DropdownItem>
+                    <DropdownItem divider />
+                    {basket.map((basketItem) => {
+                        return (
+
+                            <DropdownItem key={basketItem.id} className="basket-item" disabled>
+                                {`${basketItem.name}  -  R$${basketItem.price},00`}
+                            </DropdownItem>
+                        );
+                    })}
+                    <DropdownItem divider />
+                    <DropdownItem className="request-price" disabled>
+                        {`Total do pedido -- R$${totalPrice},00`}
+                    </DropdownItem>
+                    <button id="button">FAZER PEDIDO</button>
+                </DropdownMenu>
+            </Dropdown>
 
         </>
     );

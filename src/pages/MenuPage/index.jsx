@@ -23,14 +23,26 @@ function MenuPage() {
             price
         ])
     }
-    var totalPrice = 0
-    for (var i = 0; i < pricesGroup.length; i++) {
-        totalPrice += pricesGroup[i];
+    var totalPrice = 0;
+    if (basket) {
+        for (var i = 0; i < pricesGroup.length; i++) {
+            totalPrice += pricesGroup[i];
+        };
+    } else {
+        totalPrice = 0;
     }
-    //console.log(basketKey)
+
+    function handleCleanBasket() {
+        setBasket([]);
+        setPricesGroup([])
+    };
     return (
         <>
-            <Bag basket={basket} totalPrice={totalPrice} />
+            <Bag
+                basket={basket}
+                cleanBasket={handleCleanBasket}
+                totalPrice={totalPrice}
+            />
             <PageRoot>
 
                 <ProductsContainer AddBasket={handleAddSandwichInBasket} categoryName="Hamburgueres 1.0" />

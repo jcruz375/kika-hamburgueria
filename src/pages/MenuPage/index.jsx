@@ -38,12 +38,12 @@ function MenuPage() {
     };
     return (
         <>
+            <PageRoot>
             <Bag
                 basket={basket}
                 cleanBasket={handleCleanBasket}
                 totalPrice={totalPrice}
             />
-            <PageRoot>
 
                 <ProductsContainer AddBasket={handleAddSandwichInBasket} categoryName="Hamburgueres 1.0" />
 

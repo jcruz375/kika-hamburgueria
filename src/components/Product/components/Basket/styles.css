@@ -3,12 +3,12 @@
     border-radius: 0.9rem;
 
     position: absolute;
-    top: 22%;
+    top: 5%;
     right: 5%;
     z-index: 1;
 
     width: 20rem;
-    height: 3.3rem;
+    height: 5rem;
 }
 
 #Basket .basket-folder {
@@ -20,24 +20,24 @@
     height: 100%;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
 }
 
 #Basket .basket-folder span {
-    margin-bottom: 10%;
-
     width: 100%;
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 #Basket .basket-folder span img{
     margin-right: 9rem;
+    margin-bottom: 5%;
+
     width: 4.5rem;
     height: 4.5rem;
-    margin-bottom: 5%;
 }
 
 #Basket .basket-folder span legend {
@@ -48,8 +48,6 @@
     
     font: 700 2.5rem Nunito;
     
-    margin-top: 3%;
-    margin-bottom: 5%;
     
 }
 
@@ -92,6 +90,7 @@
 
 @media(min-width: 1100px){
     #Basket{
+        top: 10%;
         width: 30rem;
         height: 6rem;
     }

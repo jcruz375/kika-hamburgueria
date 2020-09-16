@@ -8,13 +8,8 @@
     --color-title-in-primary: #FFFFFF;
     --color-text-in-primary: #c7c7c7;
     --color-text-title: #000000;
-    --color-text-complement: #88878a;
-    --color-text-base: #0f0f0f;
-    --color-line-in-white: #E6E6F0;
-    --color-input-background: #F8F8FC;
-    --color-button-text: #FFFFFF;
+    --color-text-danger: #ec1818;
     --color-box-base: #FFFFFF;
-    --color-box-footer: #FAFAFC;
     
     font-size: 35%;
 }

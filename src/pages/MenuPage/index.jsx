@@ -34,7 +34,7 @@ function MenuPage() {
 
     function handleCleanBasket() {
         setBasket([]);
-        setPricesGroup([])
+        setPricesGroup([]);
     };
     return (
         <>

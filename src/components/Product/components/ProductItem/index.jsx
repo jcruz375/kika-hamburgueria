@@ -53,11 +53,6 @@ function ProductItem({ sandwich, AddSandwichInBasket }) {
                 e.preventDefault();
                 AddSandwichInBasket(sandwich);
             }} >
-                <input
-                    type="hidden"
-                    value={sandwich.id}
-                />
-
                 <button type="submit">ADCIONAR</button>
             </form>
         </Card>

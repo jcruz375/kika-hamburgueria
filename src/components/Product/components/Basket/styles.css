@@ -4,7 +4,7 @@
 
     position: absolute;
     top: 5%;
-    right: 5%;
+    right: 8%;
     z-index: 1;
 
     width: 20rem;
@@ -68,11 +68,10 @@
 
 #Basket .basket-menu .basket-header .btnTrash {
     background: #000;
-    width: 3rem;
-}
-#Basket .basket-menu .basket-header .btnTrash img{
-    width: 90%;
-    height: 90%;
+    width: 3.5rem;
+    height: 5rem;
+    font: 700 4rem Nunito;
+    color: var(--color-text-danger);
 }
 
 #Basket .basket-menu .basket-item {

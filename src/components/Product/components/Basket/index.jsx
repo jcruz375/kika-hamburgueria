@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-import trashImg from '../../../../assets/images/trash.svg';
 import basketImg from '../../../../assets/images/basket.svg';
 import './styles.css';
 
@@ -10,6 +9,10 @@ const Bag = ({ basket, totalPrice, cleanBasket }) => {
 
     const toggle = () => setDropdownOpen(prevState => !prevState);
 
+    function handleCreateOrder() {
+        alert('atendemos apenas delivery!');
+        cleanBasket();
+    };
 
     return (
         <>
@@ -25,13 +28,13 @@ const Bag = ({ basket, totalPrice, cleanBasket }) => {
                     <DropdownItem className="basket-header" header>
                         SUA CESTA
                         <button onClick={cleanBasket} className="btnTrash">
-                            <img src={trashImg} alt="botão limpar cesta" />
+                            X
                         </button>
                     </DropdownItem>
                     <DropdownItem divider />
                     {basket.map((basketItem) => {
-                        return (
 
+                        return (
                             <DropdownItem key={basketItem.id} className="basket-item" disabled>
                                 {`${basketItem.name}  -  R$${basketItem.price},00`}
                             </DropdownItem>
@@ -41,7 +44,13 @@ const Bag = ({ basket, totalPrice, cleanBasket }) => {
                     <DropdownItem className="request-price" disabled>
                         {`Total do pedido -- R$${totalPrice},00`}
                     </DropdownItem>
-                    <button id="button">FAZER PEDIDO</button>
+                    <form onSubmit={(e) => {
+                        e.preventDefault();
+                        handleCreateOrder();
+                    }}>
+                        <button id="button">FAZER PEDIDO</button>
+
+                    </form>
                 </DropdownMenu>
             </Dropdown>
 

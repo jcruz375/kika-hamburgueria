@@ -9,7 +9,7 @@ height: 40rem;
 padding: 10px;
 
 margin-left: 15%;
-margin-top:10%;
+margin-top:20%;
 
 display: flex;
 flex-direction: column;
@@ -37,15 +37,21 @@ color: var(--color-text-title);
 
 `
 
-function PromoItem(){
+function PromoItem({ promo, AddPromoInBasket }) {
     return (
         <PromoCard id="card">
-            <h1 className="Promo-title">Para toda a família!</h1>
+            <h1 className="Promo-title"> {promo.name} </h1>
             <span>
-                <img src="https://www.selecoes.com.br/wp-content/uploads/2019/05/hamburguer-760x450.jpg" alt="Imagem da promo"/>
+                <img src={promo.src} alt="Imagem da promo" />
             </span>
-            <p>Peça agora 3 x-bacons 1.0 por apenas R$30</p>
-            <button className="btn btn-block btn-warning">Pedir Essa!</button>
+            <p>{promo.description}</p>
+            <form onSubmit={(e) => {
+                e.preventDefault();
+                AddPromoInBasket(promo)
+            }} >
+
+                <button type="submit" className="btn btn-warning">Pedir Essa!</button>
+            </form>
         </PromoCard>
     )
 };

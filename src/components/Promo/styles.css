@@ -1,3 +1,7 @@
+#card + #card {
+    margin-top: 10%;
+}
+
 #card .Promo-title {
     font: 700 3.5rem Ubuntu;
     color: var(--color-secundary-dark);

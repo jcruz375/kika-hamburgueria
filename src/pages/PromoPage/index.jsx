@@ -4,8 +4,6 @@ import PageRoot from '../../components/PageRoot';
 import PromoItem from '../../components/Promo';
 import Bag from '../../components/Product/components/Basket'
 
-import './styles.css';
-
 const promos = [
     {
         id: '001',

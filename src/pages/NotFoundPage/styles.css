@@ -21,4 +21,5 @@
 
 .linkToHome:hover{
     background: var(--color-secundary-dark);
+    text-decoration: none;
 }

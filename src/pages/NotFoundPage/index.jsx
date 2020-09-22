@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
 
 import './styles.css';
 
@@ -31,14 +34,43 @@ margin-left: auto;
 `;
 
 
-const NotFoundPage = () => (
-    <>
-        <Page>
-            <Image />
-            <br />
-            <h1>Pagina não encontrada!</h1>
-            <Link className="linkToHome" to="/">Voltar para a Home</Link>
-        </Page>
-    </>
-)
+
+function teste() {
+    const MySwal = withReactContent(Swal);
+
+    MySwal.fire({
+        title: 'Do you want to save the changes?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: `Yes`,
+        denyButtonText: `No`,
+        customClass: {
+            cancelButton: 'order-1 right-gap',
+            confirmButton: 'order-2',
+            denyButton: 'order-3',
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire('Saved!', '', 'success')
+        } else if (result.isDenied) {
+            Swal.fire('Changes are not saved', '', 'info')
+        }
+    })
+
+}
+
+
+function NotFoundPage() {
+    return (
+        <>
+            <Page>
+                <Image />
+                <br />
+                <h1>Pagina não encontrada!</h1>
+                <button id="teste" className="linkToHome" onClick={teste}>Teste</button>
+                <Link className="linkToHome" to="/">Voltar para a Home</Link>
+            </Page>
+        </>
+    )
+}
 export default NotFoundPage;

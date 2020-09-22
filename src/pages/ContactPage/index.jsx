@@ -12,11 +12,11 @@ function ContactPage() {
                 <ul>
                     <li> 
                         WhatsApp pelo número: (11)96802-5673 ou pelo 
-                        <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5511968025673">whatsApp</a> 
+                        <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5511968025673">Link</a> 
                     </li>
                     <li>
                         Instagram: @hamburgueria_kika
-                        <a href="http://localhost:3000/static/media/instagram.f8c4f0c1.svg">Instagram</a>
+                        <a href="http://localhost:3000/static/media/instagram.f8c4f0c1.svg">Link</a>
                     </li>
                     <li>
                         E-mail: hamburgueriakika@gmail.com

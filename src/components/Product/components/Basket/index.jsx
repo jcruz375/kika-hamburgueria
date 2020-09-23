@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 import basketImg from '../../../../assets/images/basket.svg';
 import './styles.css';
+
 
 const Bag = ({ basket, totalPrice, cleanBasket }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -10,7 +13,26 @@ const Bag = ({ basket, totalPrice, cleanBasket }) => {
     const toggle = () => setDropdownOpen(prevState => !prevState);
 
     function handleCreateOrder() {
-        alert('atendemos apenas delivery!');
+        const MySwal = withReactContent(Swal);
+
+        MySwal.fire({
+            title: 'Deseja completar o pedido?',
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: `Sim`,
+            denyButtonText: `Não`,
+            customClass: {
+                cancelButton: 'order-1 right-gap',
+                confirmButton: 'order-2',
+                denyButton: 'order-3',
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire('Pedido realizado, nosso atendente entrará em contato!', '', 'success')
+            } else if (result.isDenied) {
+                Swal.fire('Pedido não foi concluído!', '', 'info')
+            }
+        });
         cleanBasket();
     };
 

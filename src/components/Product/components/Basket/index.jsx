@@ -1,38 +1,19 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
 
 import basketImg from '../../../../assets/images/basket.svg';
 import './styles.css';
 
 
-const Bag = ({ basket, totalPrice, cleanBasket }) => {
+const Bag = ({ basket, totalPrice, cleanBasket, basketType }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const toggle = () => setDropdownOpen(prevState => !prevState);
 
     function handleCreateOrder() {
-        const MySwal = withReactContent(Swal);
-
-        MySwal.fire({
-            title: 'Deseja completar o pedido?',
-            showDenyButton: true,
-            showCancelButton: true,
-            confirmButtonText: `Sim`,
-            denyButtonText: `Não`,
-            customClass: {
-                cancelButton: 'order-1 right-gap',
-                confirmButton: 'order-2',
-                denyButton: 'order-3',
-            }
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire('Pedido realizado, nosso atendente entrará em contato!', '', 'success')
-            } else if (result.isDenied) {
-                Swal.fire('Pedido não foi concluído!', '', 'info')
-            }
-        });
+        localStorage.setItem(basketType, JSON.stringify(basket));
+        localStorage.setItem(`${basketType}Price`, JSON.stringify(totalPrice));
         cleanBasket();
     };
 
@@ -66,13 +47,7 @@ const Bag = ({ basket, totalPrice, cleanBasket }) => {
                     <DropdownItem className="request-price" disabled>
                         {`Total do pedido -- R$${totalPrice},00`}
                     </DropdownItem>
-                    <form onSubmit={(e) => {
-                        e.preventDefault();
-                        handleCreateOrder();
-                    }}>
-                        <button id="button">FAZER PEDIDO</button>
-
-                    </form>
+                    <Link to="/pedidos" onClick={handleCreateOrder} className="btn btn-warning btn-block">CONCLUIR PEDIDO</Link>
                 </DropdownMenu>
             </Dropdown>
 

@@ -21,7 +21,7 @@ function MenuPage() {
         setPricesGroup([
             ...pricesGroup,
             price
-        ])
+        ]);
     }
     var totalPrice = 0;
     if (basket) {
@@ -43,6 +43,7 @@ function MenuPage() {
                 basket={basket}
                 cleanBasket={handleCleanBasket}
                 totalPrice={totalPrice}
+                basketType="products"
             />
 
                 <ProductsContainer AddBasket={handleAddSandwichInBasket} categoryName="Hamburgueres 1.0" />

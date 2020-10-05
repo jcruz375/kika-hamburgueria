@@ -84,7 +84,8 @@
 }
 
 #Basket .basket-menu #button {
-    width: 100%;
+    font: 700 2rem Nunito;
+    border-radius: 2rem;
 }
 
 @media(min-width: 1100px){

@@ -22,12 +22,12 @@ const promos = [
 ]
 
 function PromoPage() {
-    const [bag, setBag] = useState([]);
+    const [basket, setBasket] = useState([]);
     const [pricesGroup, setPricesGroup] = useState([]);
 
     const handleAddPromoInBasket = (promo) => {
-        setBag([
-            ...bag,
+        setBasket([
+            ...basket,
             promo
         ]);
         const price = parseInt(promo.price);
@@ -37,7 +37,7 @@ function PromoPage() {
         ])
     }
     var totalPrice = 0;
-    if (bag) {
+    if (basket) {
         for (var i = 0; i < pricesGroup.length; i++) {
             totalPrice += pricesGroup[i];
         };
@@ -46,15 +46,16 @@ function PromoPage() {
     }
 
     function handleCleanBasket() {
-        setBag([]);
+        setBasket([]);
         setPricesGroup([]);
     };
     return (
         <PageRoot>
             <Bag
-                basket={bag}
+                basket={basket}
                 cleanBasket={handleCleanBasket}
                 totalPrice={totalPrice}
+                basketType="promos"
             />
             {promos.map((promo) => {
                 return <PromoItem
